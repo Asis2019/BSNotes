@@ -3,14 +3,13 @@ using IPA.Config.Stores;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
 
-namespace BSNotes.Configuration
-{
-    internal class PluginConfig
-    {
-        public static PluginConfig Instance { get; set; }
+namespace BSNotes.Configuration;
 
-        /// A value for the config has to be virtual if you want BSIPA
-        /// to detect a value change and save the config automatically
-        // public virtual int MeaningofLife = 42 { get; set; } 
-    }
+internal class PluginConfig
+{
+    public static PluginConfig Instance { get; set; } = null!;
+
+    /// A value for the config has to be virtual if you want BSIPA
+    /// to detect a value change and save the config automatically
+    public virtual string NotesDirectory { get; set; } = "BSNotes";
 }

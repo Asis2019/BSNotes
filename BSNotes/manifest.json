@@ -1,14 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
-  "id": "Name of your mod",
-  "name": "Name of your Mod",
-  "author": "Your name",
-  "version": "MAJOR.MINOR.PATCH",
-  "description": "",
-  "gameVersion": "1.19.0",
+  "id": "BSNotes",
+  "name": "BSNotes",
+  "author": "Asis",
+  "version": "1.0.0",
+  "description": "A simple mod that lets you take notes in game and add notes for yourself from the outside.",
+  "gameVersion": "1.27.0",
   "dependsOn": {
-    "BSIPA": "^4.2.0",
-    "BeatSaberMarkupLanguage": "^1.5.12",
-    "SiraUtil": "^3.0.0"
+    "BSIPA": "^4.2.2",
+    "BeatSaberMarkupLanguage": "^1.6.8",
+    "SiraUtil": "^3.0.5"
   }
 }

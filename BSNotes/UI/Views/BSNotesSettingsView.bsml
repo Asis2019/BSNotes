@@ -1,0 +1,13 @@
+<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
+    <horizontal background="panel-top" anchor-min-y="1" pad-left="5" pad-right="5" pad-top="1"
+                pad-bottom="1" horizontal-fit="PreferredSize" spacing="5">
+        <image id="vanilla-image" src="BSNotes.Resources.w_14.jpg" preserve-aspect="true" pref-width="12"
+               pref-height="12"/>
+        <text text="BSNotes" align="Center" font-size="8" italics="true"/>
+    </horizontal>
+    
+    <vertical anchor-min-y="10">
+        <text text="Yeah we don't have settings lmao" align="Center" font-size="6"/>
+    </vertical>
+</bg>

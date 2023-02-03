@@ -1,20 +1,19 @@
 using BSNotes.Configuration;
 using Zenject;
 
-namespace BSNotes.Installers
+namespace BSNotes.Installers;
+
+internal class BSNotesAppInstaller : Installer
 {
-    internal class AppInstaller : Installer
+    private readonly PluginConfig _config;
+
+    public BSNotesAppInstaller(PluginConfig config)
     {
-        private readonly PluginConfig _config;
+        _config = config;
+    }
 
-        public AppInstaller(PluginConfig config)
-        {
-            _config = config;
-        }
-
-        public override void InstallBindings()
-        {
-            Container.BindInstance(_config);
-        }
+    public override void InstallBindings()
+    {
+        Container.BindInstance(_config).AsSingle();
     }
 }
