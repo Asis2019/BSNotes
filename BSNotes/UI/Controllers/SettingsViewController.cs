@@ -2,13 +2,13 @@
 using BeatSaberMarkupLanguage.Settings;
 using Zenject;
 
-namespace BSNotes.UI;
+namespace BSNotes.UI.Controllers;
 
-internal class BSNotesSettingsViewController : IInitializable, IDisposable
+internal class SettingsViewController : IInitializable, IDisposable
 {
     public void Initialize()
     {
-        BSMLSettings.instance.AddSettingsMenu(nameof(BSNotes), "BSNotes.UI.Views.BSNotesSettingsView.bsml", this);
+        BSMLSettings.instance.AddSettingsMenu(nameof(BSNotes), "BSNotes.UI.Views.SettingsView.bsml", this);
     }
 
     public void Dispose()

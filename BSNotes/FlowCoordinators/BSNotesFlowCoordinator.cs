@@ -1,38 +1,35 @@
+using BeatSaberMarkupLanguage;
+using BSNotes.UI.Controllers;
 using HMUI;
-using BSNotes.UI;
+using Zenject;
 
-namespace BSNotes.FlowCoordinators
+namespace BSNotes.FlowCoordinators;
+
+internal class BSNotesFlowCoordinator : FlowCoordinator
 {
-    internal class BSNotesFlowCoordinator : FlowCoordinator
+    private MainFlowCoordinator _mainFlowCoordinator = null!;
+    private MainViewController _mainViewController;
+
+    [Inject]
+    public void Inject(MainFlowCoordinator mainFlowCoordinator, MainViewController mainViewController)
     {
-        private BSNotesSettingsViewController _bsNotesSettingsViewController = null!;
+        _mainFlowCoordinator = mainFlowCoordinator;
+        _mainViewController = mainViewController;
+    }
 
-        public void Construct(BSNotesSettingsViewController bsNotesSettingsViewController)
+    protected override void DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
+    {
+        if (firstActivation)
         {
-            _bsNotesSettingsViewController = bsNotesSettingsViewController;
+            SetTitle(nameof(BSNotes));
+            showBackButton = true;
+
+            ProvideInitialViewControllers(_mainViewController);
         }
+    }
 
-        protected override void DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
-        {
-            // ProvideInitialViewControllers(_bsNotesSettingsViewController);
-            /*try
-            {
-                if (firstActivation)
-                {
-                    SetTitle("Name of the Menu Button :)");
-                    showBackButton = true;
-                    // ProvideInitialViewControllers( _bsNotesViewController);
-                }
-            }
-            catch (Exception ex)
-            {
-                _siraLog.Error(ex);
-            }*/
-        }
-
-        /*protected override void BackButtonWasPressed(ViewController topViewController)
-        {
-            _mainFlowCoordinator.DismissFlowCoordinator(this);
-        }*/
+    protected override void BackButtonWasPressed(ViewController viewController)
+    {
+        _mainFlowCoordinator.DismissFlowCoordinator(this);
     }
 }
