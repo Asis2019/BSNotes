@@ -1,5 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using IPA.Config.Stores;
+using IPA.Config.Stores.Attributes;
+using SiraUtil.Converters;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
 
@@ -8,8 +10,7 @@ namespace BSNotes.Configuration;
 internal class PluginConfig
 {
     public static PluginConfig Instance { get; set; } = null!;
-
-    /// A value for the config has to be virtual if you want BSIPA
-    /// to detect a value change and save the config automatically
-    public virtual string NotesDirectory { get; set; } = "BSNotes";
+    
+    [NonNullable, UseConverter(typeof(VersionConverter))]
+    public virtual Hive.Versioning.Version Version { get; set; } = new("0.0.0");
 }

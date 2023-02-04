@@ -1,0 +1,29 @@
+<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
+    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="10"
+                    bg="panel-top">
+            <text text="Notes List" align="Center" font-size="7"/>
+        </horizontal>
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="60">
+            <custom-list id="notes-list" cell-size="10" pref-width="80" pref-height="60" visible-cells="6">
+                <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="80" pref-height="10">
+                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="9" pref-height="9">
+                        <image preserve-aspect="true" src="BSNotes.Resources.ic_note_white.png"/>
+                    </vertical>
+                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="59" pref-height="9">
+                        <text id="file-name" align="Left"/>
+                        <text id="note-content" align="Left"/>
+                    </vertical>
+                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="10" pref-height="9">
+                        <button text="+" pref-width="9" pref-height="9" on-click="clicked-create-button"/>
+                    </vertical>
+                </horizontal>
+            </custom-list>
+            <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="10" pref-height="100">
+                <page-button id="up-button" dir="Up" pref-width="10" event-click="notes-list#PageUp" />
+                <page-button id="down-button" dir="Down" pref-width="10" event-click="notes-list#PageDown" />
+            </vertical>
+        </horizontal>
+    </vertical>
+</bg>

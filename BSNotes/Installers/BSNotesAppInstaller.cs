@@ -1,4 +1,5 @@
 using BSNotes.Configuration;
+using BSNotes.Managers;
 using Zenject;
 
 namespace BSNotes.Installers;
@@ -15,5 +16,6 @@ internal class BSNotesAppInstaller : Installer
     public override void InstallBindings()
     {
         Container.BindInstance(_config).AsSingle();
+        Container.BindInterfacesAndSelfTo<NotesManager>().AsSingle();
     }
 }
