@@ -1,8 +1,7 @@
 <bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
     <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
-        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="10"
-                    bg="panel-top">
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="10" bg="panel-top">
             <text text="Notes List" align="Center" font-size="7"/>
         </horizontal>
         <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="60">
@@ -16,7 +15,7 @@
                         <text id="note-content" align="Left"/>
                     </vertical>
                     <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="10" pref-height="9">
-                        <button text="+" pref-width="9" pref-height="9" on-click="clicked-create-button"/>
+                        <clickable-image preserve-aspect="true" src="BSNotes.Resources.ic_archive_white.png" on-click="clicked-archive-button"/>
                     </vertical>
                 </horizontal>
             </custom-list>

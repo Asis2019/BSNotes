@@ -27,16 +27,22 @@ internal class NotesListViewController : BSMLAutomaticViewController
     [UIAction("#post-parse")]
     protected void Parsed()
     {
-        _ = LoadNotes();
+        LoadNotes();
     }
 
-    private async Task LoadNotes()
+    [UIAction("clicked-archive-button")]
+    protected void ArchiveNote()
+    {
+        Plugin.Log.Info("Clicked the archive button");
+    }
+
+    private void LoadNotes()
     {
         if (_didLoad)
             return;
 
         foreach (var note in _notesManager.GetNotes())
-            _notesList.data.Add(new NoteCell(nameof(BSNotes), note));
+            _notesList.data.Add(new NoteCell(note));
 
         _notesList.tableView.ReloadData();
         _didLoad = true;

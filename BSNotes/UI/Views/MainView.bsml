@@ -2,10 +2,7 @@
     xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
     <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
         <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
-            <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
-                <image src="BSNotes.Resources.w_14.jpg" pref-width="42" pref-height="42" preserve-aspect="true"/>
-            </vertical>
+            <text text="The main screen for content" font-size="10"/>
         </horizontal>
-        <text text="~version" align="Center" font-size="7.5"/>
     </vertical>
 </bg>

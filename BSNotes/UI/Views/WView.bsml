@@ -1,0 +1,14 @@
+<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
+    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="10" bg="panel-top">
+            <text text="W Panel" align="Center" font-size="7"/>
+        </horizontal>
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pad-top="4">
+            <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
+                <image src="BSNotes.Resources.W.jpg" pref-width="42" pref-height="42" preserve-aspect="true"/>
+            </vertical>
+        </horizontal>
+        <text text="~version" align="Center" font-size="7.5"/>
+    </vertical>
+</bg>

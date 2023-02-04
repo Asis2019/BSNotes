@@ -1,27 +1,27 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
+using BSNotes.Model;
 using HMUI;
 
 namespace BSNotes.UI.Components;
 
 internal class NoteCell
 {
-    public readonly string fileName, noteContent;
+    public readonly Note note;
 
     [UIComponent("file-name")] protected readonly CurvedTextMeshPro _fileName = null!;
 
     [UIComponent("note-content")] protected readonly CurvedTextMeshPro _noteContent = null!;
 
-    public NoteCell(string fileName, string noteContent)
+    public NoteCell(Note note)
     {
-        this.fileName = fileName;
-        this.noteContent = noteContent;
+        this.note = note;
     }
 
     [UIAction("#post-parse")]
     protected void Parsed()
     {
-        _fileName.text = fileName;
-        _noteContent.text = noteContent;
+        _fileName.text = note.fileName;
+        _noteContent.text = note.noteContent;
     }
 
     [UIAction("clicked-create-button")]

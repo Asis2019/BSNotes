@@ -15,6 +15,7 @@ internal class BSNotesMenuInstaller : Installer
         //Bind controllers
         Container.Bind<MainViewController>().FromNewComponentAsViewController().AsSingle();
         Container.Bind<NotesListViewController>().FromNewComponentAsViewController().AsSingle();
+        Container.Bind<WViewController>().FromNewComponentAsViewController().AsSingle();
 
         //Bind settings view controller
         Container.BindInterfacesTo<SettingsViewController>().AsSingle();

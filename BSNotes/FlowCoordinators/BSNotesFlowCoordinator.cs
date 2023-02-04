@@ -10,14 +10,20 @@ internal class BSNotesFlowCoordinator : FlowCoordinator
     private MainFlowCoordinator _mainFlowCoordinator = null!;
     private MainViewController _mainViewController = null!;
     private NotesListViewController _notesListViewController = null!;
+    private WViewController _wViewController = null!;
 
     [Inject]
-    public void Inject(MainFlowCoordinator mainFlowCoordinator, MainViewController mainViewController,
-        NotesListViewController notesListViewController)
+    public void Inject(
+        MainFlowCoordinator mainFlowCoordinator,
+        MainViewController mainViewController,
+        WViewController wViewController,
+        NotesListViewController notesListViewController
+    )
     {
         _mainFlowCoordinator = mainFlowCoordinator;
         _mainViewController = mainViewController;
         _notesListViewController = notesListViewController;
+        _wViewController = wViewController;
     }
 
     protected override void DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling)
@@ -26,8 +32,7 @@ internal class BSNotesFlowCoordinator : FlowCoordinator
         {
             SetTitle(nameof(BSNotes));
             showBackButton = true;
-
-            ProvideInitialViewControllers(_mainViewController, _notesListViewController);
+            ProvideInitialViewControllers(_mainViewController, _notesListViewController, _wViewController);
         }
     }
 

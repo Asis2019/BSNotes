@@ -15,7 +15,7 @@ namespace BSNotes;
 public class Plugin
 {
     private static Plugin Instance { get; set; } = null!;
-    internal static IPALogger Log { get; set; } = null!;
+    internal static IPALogger Log { get; private set; } = null!;
 
     [Init]
     public Plugin(Zenjector zenjector, IPALogger logger, Config config, PluginMetadata metadata)
