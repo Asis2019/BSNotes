@@ -25,7 +25,7 @@ public class Plugin
         Log.Info("BSNotes initialized.");
         
         var folderPath = Path.Combine(UnityGame.UserDataPath, nameof(BSNotes));
-        Directory.CreateDirectory(folderPath);
+        Directory.CreateDirectory(Path.Combine(folderPath, "Archive"));
 
         zenjector.UseLogger(logger);
         zenjector.UseMetadataBinder<Plugin>();

@@ -1,4 +1,5 @@
-﻿using BeatSaberMarkupLanguage.Attributes;
+﻿using System;
+using BeatSaberMarkupLanguage.Attributes;
 using BSNotes.Model;
 using HMUI;
 
@@ -6,27 +7,35 @@ namespace BSNotes.UI.Components;
 
 internal class NoteCell
 {
-    public readonly Note note;
+    private readonly Note _note;
+    private readonly Action<Note> _noteSelectedAction;
+    private readonly Action<Note> _archiveAction;
 
-    [UIComponent("file-name")] protected readonly CurvedTextMeshPro _fileName = null!;
+    [UIComponent("file-name")] 
+    protected readonly CurvedTextMeshPro _fileName = null!;
 
-    [UIComponent("note-content")] protected readonly CurvedTextMeshPro _noteContent = null!;
-
-    public NoteCell(Note note)
+    public NoteCell(Note note, Action<Note> selectedAction, Action<Note> archiveAction)
     {
-        this.note = note;
+        _note = note;
+        _noteSelectedAction = selectedAction;
+        _archiveAction = archiveAction;
     }
 
     [UIAction("#post-parse")]
     protected void Parsed()
     {
-        _fileName.text = note.fileName;
-        _noteContent.text = note.noteContent;
+        _fileName.text = _note.GetNoteTitle();
     }
 
-    [UIAction("clicked-create-button")]
-    protected void ClickedCreateButton()
+    [UIAction("clicked-note")]
+    protected void ClickedNote()
     {
-        Plugin.Log.Info("BSNotes: Button Clicked");
+        _noteSelectedAction?.Invoke(_note);
+    }
+
+    [UIAction("clicked-archive-button")]
+    protected void ClickedArchiveButton()
+    {
+        _archiveAction?.Invoke(_note);
     }
 }

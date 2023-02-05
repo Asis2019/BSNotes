@@ -1,8 +1,9 @@
-<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
-    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
-        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
-            <text text="The main screen for content" font-size="10"/>
-        </horizontal>
-    </vertical>
-</bg>
+<vertical child-align="UpperCenter" child-control-height="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
+    <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90">
+        <text text="~title" font-size="7" align="Center"/>
+    </horizontal>
+    <horizontal bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-height="50" pref-width="90">
+        <text-page text="~content" font-size="4" size-delta-y="50"/>
+    </horizontal>
+</vertical>

@@ -4,25 +4,33 @@
         <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="10" bg="panel-top">
             <text text="Notes List" align="Center" font-size="7"/>
         </horizontal>
-        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="60">
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="60" pad-top="4">
             <custom-list id="notes-list" cell-size="10" pref-width="80" pref-height="60" visible-cells="6">
                 <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="80" pref-height="10">
-                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="9" pref-height="9">
-                        <image preserve-aspect="true" src="BSNotes.Resources.ic_note_white.png"/>
+                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="4" pref-height="4">
+                        <clickable-image preserve-aspect="true" src="BSNotes.Resources.ic_note_white.png" on-click="clicked-note"/>
                     </vertical>
-                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="59" pref-height="9">
-                        <text id="file-name" align="Left"/>
-                        <text id="note-content" align="Left"/>
+                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="60" pref-height="9">
+                        <clickable-text id="file-name" align="Left" on-click="clicked-note"/>
                     </vertical>
-                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="10" pref-height="9">
+                    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="4" pref-height="4">
                         <clickable-image preserve-aspect="true" src="BSNotes.Resources.ic_archive_white.png" on-click="clicked-archive-button"/>
                     </vertical>
                 </horizontal>
             </custom-list>
+            <text active="false" 
+                  id="no-notes-message" 
+                  text="You don't have any notes. Create a text file in UserData/BSNotes/ to add a note" 
+                  font-size="4"
+                  align="Midline"
+            />
             <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="10" pref-height="100">
                 <page-button id="up-button" dir="Up" pref-width="10" event-click="notes-list#PageUp" />
                 <page-button id="down-button" dir="Down" pref-width="10" event-click="notes-list#PageDown" />
             </vertical>
+        </horizontal>
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="10">
+            <button id="refresh-list" text="Refresh List" on-click="refresh-list"/>
         </horizontal>
     </vertical>
 </bg>

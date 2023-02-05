@@ -9,9 +9,6 @@ internal class BSNotesMenuInstaller : Installer
 {
     public override void InstallBindings()
     {
-        //Bind button that lives in the main menu
-        Container.BindInterfacesTo<MenuButtonManager>().AsSingle();
-
         //Bind controllers
         Container.Bind<MainViewController>().FromNewComponentAsViewController().AsSingle();
         Container.Bind<NotesListViewController>().FromNewComponentAsViewController().AsSingle();
@@ -22,5 +19,8 @@ internal class BSNotesMenuInstaller : Installer
 
         //Bind main flow coordinator
         Container.Bind<BSNotesFlowCoordinator>().FromNewComponentOnNewGameObject().AsSingle();
+        
+        //Bind button that lives in the main menu
+        Container.BindInterfacesTo<MenuButtonManager>().AsSingle();
     }
 }
