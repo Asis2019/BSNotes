@@ -13,4 +13,7 @@ internal class PluginConfig
     
     [NonNullable, UseConverter(typeof(VersionConverter))]
     public virtual Hive.Versioning.Version Version { get; set; } = new("0.0.0");
+    
+    public virtual bool Enabled { get; set; } = true;
+    public virtual bool WPanelEnabled { get; set; } = true;
 }

@@ -1,9 +1,7 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.ViewControllers;
+using BSNotes.Configuration;
 using Hive.Versioning;
-using IPA.Loader;
-using SiraUtil.Zenject;
-using Zenject;
 
 namespace BSNotes.UI.Controllers;
 
@@ -11,12 +9,11 @@ namespace BSNotes.UI.Controllers;
 [HotReload(RelativePathToLayout = @"..\Views\WView.bsml")]
 public class WViewController : BSMLAutomaticViewController
 {
-    private Version _version = null!;
+    private readonly Version _version;
 
-    [Inject]
-    public void Inject(UBinder<Plugin, PluginMetadata> metadataBinder)
+    public WViewController()
     {
-        _version = metadataBinder.Value.HVersion;
+        _version = PluginConfig.Instance.Version;
     }
 
     [UIValue("version")] protected string Version => $"v{_version}";

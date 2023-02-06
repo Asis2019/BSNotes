@@ -1,4 +1,5 @@
 using BeatSaberMarkupLanguage;
+using BSNotes.Configuration;
 using BSNotes.UI.Controllers;
 using HMUI;
 using Zenject;
@@ -32,7 +33,12 @@ internal class BSNotesFlowCoordinator : FlowCoordinator
         {
             SetTitle(nameof(BSNotes));
             showBackButton = true;
-            ProvideInitialViewControllers(_mainViewController, _notesListViewController, _wViewController);
+
+            //Check if the heathen setting is enabled or not
+            if (PluginConfig.Instance.WPanelEnabled)
+                ProvideInitialViewControllers(_mainViewController, _notesListViewController, _wViewController);
+            else
+                ProvideInitialViewControllers(_mainViewController, _notesListViewController);
         }
     }
 

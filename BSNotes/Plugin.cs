@@ -30,11 +30,11 @@ public class Plugin
         zenjector.UseLogger(logger);
         zenjector.UseMetadataBinder<Plugin>();
 
-        var pluginConfig = config.Generated<PluginConfig>();
-        pluginConfig.Version = metadata.HVersion;
+        PluginConfig.Instance = config.Generated<PluginConfig>();
+        PluginConfig.Instance.Version = metadata.HVersion;
         
         // This logic also goes for installing to Menu and Game. "Location." will give you a list of places to install to.
-        zenjector.Install<BSNotesAppInstaller>(Location.App, pluginConfig);
+        zenjector.Install<BSNotesAppInstaller>(Location.App);
         zenjector.Install<BSNotesMenuInstaller>(Location.Menu);
     }
 }

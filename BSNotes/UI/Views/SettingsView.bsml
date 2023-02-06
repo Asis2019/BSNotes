@@ -1,7 +1,5 @@
-<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<settings-container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
-    <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize">
-        <text text="BSNotes" align="Center" font-size="8" italics="true"/>
-        <text text="BSNotes does not currently have any settings" align="Center" font-size="6"/>
-    </vertical>
-</bg>
+    <toggle-setting value='mod-enabled' text='Enable BSNotes' hover-hint='Adds or removes the BSNotes main menu button.'/>
+    <toggle-setting value='w-panel-enabled' text='Enable W panel' hover-hint='Adds or removes the W Panel in the mods menu.'/>
+</settings-container>

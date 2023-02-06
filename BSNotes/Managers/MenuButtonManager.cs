@@ -1,6 +1,7 @@
 ﻿using System;
 using BeatSaberMarkupLanguage;
 using BeatSaberMarkupLanguage.MenuButtons;
+using BSNotes.Configuration;
 using BSNotes.FlowCoordinators;
 using Zenject;
 
@@ -21,6 +22,7 @@ internal class MenuButtonManager : IInitializable, IDisposable
 
     public void Initialize()
     {
+        if (!PluginConfig.Instance.Enabled) return; //Don't add menu button if mod is disabled 
         MenuButtons.instance.RegisterButton(_menuButton);
     }
 
