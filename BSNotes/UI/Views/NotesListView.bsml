@@ -14,7 +14,7 @@
                         <clickable-text id="file-name" align="Left" on-click="clicked-note"/>
                     </vertical>
                     <vertical horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="4" pref-height="4">
-                        <clickable-image preserve-aspect="true" src="BSNotes.Resources.ic_archive_white.png" on-click="clicked-archive-button"/>
+                        <clickable-image preserve-aspect="true" src="BSNotes.Resources.ic_archive_white.png" on-click="clicked-archive-button" hover-hint="Move note to archive folder"/>
                     </vertical>
                 </horizontal>
             </custom-list>
@@ -30,7 +30,7 @@
             </vertical>
         </horizontal>
         <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="90" pref-height="10">
-            <button id="refresh-list" text="Refresh List" on-click="refresh-list"/>
+            <button id="refresh-list" text="Refresh List" on-click="refresh-list" hover-hint="Reload note list"/>
         </horizontal>
     </vertical>
 </bg>

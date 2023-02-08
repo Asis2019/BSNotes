@@ -3,7 +3,7 @@
   "id": "BSNotes",
   "name": "BSNotes",
   "author": "Asis",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple mod that lets you take notes in game and add notes for yourself from the outside.",
   "gameVersion": "1.27.0",
   "dependsOn": {
