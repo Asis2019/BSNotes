@@ -30,6 +30,16 @@ internal class NotesManager
         return _notes;
     }
 
+    public Note GetNote(int index)
+    {
+        return _notes[index];
+    }
+
+    public int GetNoteCount()
+    {
+        return _notes.Count;
+    }
+
     private void LoadNotes()
     {
         var directoryInfo = new DirectoryInfo(Path.Combine(UnityGame.UserDataPath, nameof(BSNotes)));

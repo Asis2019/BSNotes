@@ -1,0 +1,15 @@
+<bg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd">
+    <vertical pad-top="2">
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="110">
+            <text text="~title" font-size="7" align="Center"/>
+        </horizontal>
+        <horizontal horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-width="110" pref-height="60">
+            <page-button id="prev-button" dir="Left" pref-width="10" pref-height="10" hover-hint="View previous note" on-click="prev-button-action"/>
+            <horizontal bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="PreferredSize" pref-height="50" pref-width="90">
+                <text-page id="text-page" text="~content" font-size="4" size-delta-y="50"/>
+            </horizontal>
+            <page-button id="next-button" dir="Right" pref-width="10" pref-height="10" hover-hint="View next note" on-click="next-button-action"/>
+        </horizontal>
+    </vertical>
+</bg>

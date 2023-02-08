@@ -16,6 +16,9 @@ internal class BSNotesMenuInstaller : Installer
 
         //Bind settings view controller
         Container.BindInterfacesTo<SettingsViewController>().AsSingle();
+        
+        //Bind GameplaySetup controller, this is the controller that adds the tab to the mods menu
+        Container.BindInterfacesAndSelfTo<GameplaySetupController>().AsSingle();
 
         //Bind main flow coordinator
         Container.Bind<BSNotesFlowCoordinator>().FromNewComponentOnNewGameObject().AsSingle();
