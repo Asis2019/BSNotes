@@ -1,4 +1,4 @@
-# BSNotes (Beat Saber Notes)
+# BS Notepad (Beat Saber Notepad)
 Is a Beat Saber mod for viewing text notes inside the game. 
 ## Usage
 ### General
@@ -11,7 +11,7 @@ BSNotes will load .txt files which are saved within ``Beat Saber\UserData\BSNote
 The W Panel shows the current version of the mod and a nice image of the character W from Arknights. This was included because W is best girl. If you are a heathen, the panel can be disabled in the settings.
 
 ## Installation
-[Install](https://bsmg.wiki/pc-modding.html#install-mods) the latest version of [BSNotes](https://github.com/Asis2019/BSNotes/releases) and the dependencies listed below.
+[Install](https://bsmg.wiki/pc-modding.html#install-mods) the latest version of [BS Notepad](https://github.com/Asis2019/BSNotes/releases) and the dependencies listed below.
 ### Dependencies
 * [SiraUtil](https://github.com/Auros/SiraUtil) _- Available in ModAssistant_
 * [BeatSaberMarkupLanguage](https://github.com/monkeymanboy/BeatSaberMarkupLanguage) _- Available in ModAssistant_
