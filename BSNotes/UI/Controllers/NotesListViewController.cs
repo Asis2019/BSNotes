@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using BeatSaberMarkupLanguage.Attributes;
+﻿using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.Components;
 using BeatSaberMarkupLanguage.ViewControllers;
 using BSNotes.Managers;

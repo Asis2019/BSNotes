@@ -15,7 +15,7 @@ internal class MenuButtonManager : IInitializable, IDisposable
 
     public MenuButtonManager(MainFlowCoordinator mainFlowCoordinator, BSNotesFlowCoordinator bsNotesFlowCoordinator)
     {
-        _menuButton = new MenuButton(nameof(BSNotes), ShowFlowCoordinator);
+        _menuButton = new MenuButton(PluginConfig.Instance.Name, ShowFlowCoordinator);
         _mainFlowCoordinator = mainFlowCoordinator;
         _bsNotesFlowCoordinator = bsNotesFlowCoordinator;
     }

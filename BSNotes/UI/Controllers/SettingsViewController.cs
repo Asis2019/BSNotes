@@ -10,7 +10,7 @@ internal class SettingsViewController : IInitializable, IDisposable
 {
     public void Initialize()
     {
-        BSMLSettings.instance.AddSettingsMenu(nameof(BSNotes), "BSNotes.UI.Views.SettingsView.bsml", this);
+        BSMLSettings.instance.AddSettingsMenu(PluginConfig.Instance.Name, "BSNotes.UI.Views.SettingsView.bsml", this);
     }
 
     public void Dispose()

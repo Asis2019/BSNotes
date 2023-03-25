@@ -26,12 +26,12 @@ internal class GameplaySetupController : IInitializable, IDisposable, INotifyPro
         if (!PluginConfig.Instance.Enabled) return; //Don't button if mod is disabled
 
         _notesManager.RefreshNotes();
-        GameplaySetup.instance.AddTab("BSNotes", "BSNotes.UI.Views.QuickNotesView.bsml", this);
+        GameplaySetup.instance.AddTab(PluginConfig.Instance.Name, "BSNotes.UI.Views.QuickNotesView.bsml", this);
     }
 
     public void Dispose()
     {
-        if (GameplaySetup.IsSingletonAvailable) GameplaySetup.instance.RemoveTab("BSNotes");
+        if (GameplaySetup.IsSingletonAvailable) GameplaySetup.instance.RemoveTab(PluginConfig.Instance.Name);
     }
 
     private void ToggleButtons()

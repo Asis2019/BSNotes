@@ -31,7 +31,7 @@ internal class BSNotesFlowCoordinator : FlowCoordinator
     {
         if (firstActivation)
         {
-            SetTitle(nameof(BSNotes));
+            SetTitle(PluginConfig.Instance.Name);
             showBackButton = true;
 
             //Check if the heathen setting is enabled or not
